@@ -1,0 +1,1214 @@
+```html id="nasa_wh01_complete_redone"
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NASA | Voyager registra possível Buraco Branco</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#04070f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* SCROLL */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050811;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1e5db8;
+    border-radius:20px;
+}
+
+/* HEADER */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    padding:18px 50px;
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.logo img{
+    width:58px;
+}
+
+.logo h1{
+
+    font-size:26px;
+    letter-spacing:4px;
+    font-weight:800;
+}
+
+.nav-links{
+
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    transition:0.35s;
+
+    font-size:14px;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+
+    background:rgba(255,255,255,0.08);
+
+    color:#71b9ff;
+
+    transform:translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(4,7,15,1)),
+    url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2000&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:140px 30px 80px;
+}
+
+.hero-content{
+    max-width:1250px;
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:999px;
+
+    background:rgba(80,150,255,0.12);
+
+    border:1px solid rgba(80,150,255,0.2);
+
+    color:#70b9ff;
+
+    font-size:14px;
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+}
+
+.hero h2{
+
+    font-size:96px;
+
+    line-height:1;
+
+    margin-bottom:35px;
+
+    text-transform:uppercase;
+
+    font-weight:900;
+}
+
+.hero p{
+
+    color:#d4d4d4;
+
+    line-height:2;
+
+    font-size:22px;
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.highlight{
+
+    color:#71b9ff;
+
+    font-weight:700;
+}
+
+.hero-buttons{
+
+    margin-top:50px;
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-buttons a{
+
+    text-decoration:none;
+
+    padding:17px 30px;
+
+    border-radius:14px;
+
+    transition:0.35s;
+
+    font-weight:700;
+}
+
+.btn-primary{
+
+    background:#1f63c0;
+
+    color:white;
+}
+
+.btn-primary:hover{
+
+    background:#2f79df;
+
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    color:white;
+}
+
+.btn-secondary:hover{
+
+    background:rgba(255,255,255,0.08);
+
+    transform:translateY(-3px);
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:92%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:110px 0;
+}
+
+/* TITLES */
+
+.section-title{
+
+    font-size:58px;
+
+    margin-bottom:24px;
+
+    font-weight:900;
+}
+
+.section-subtitle{
+
+    color:#c9c9c9;
+
+    line-height:1.9;
+
+    max-width:1050px;
+
+    margin-bottom:55px;
+
+    font-size:18px;
+}
+
+/* ARTICLE */
+
+.article-grid{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.article-grid img{
+
+    width:100%;
+
+    border-radius:30px;
+
+    box-shadow:0 0 60px rgba(0,0,0,0.5);
+}
+
+.article-content h3{
+
+    font-size:56px;
+
+    margin-bottom:30px;
+}
+
+.article-content p{
+
+    color:#d4d4d4;
+
+    line-height:2;
+
+    margin-bottom:24px;
+
+    font-size:18px;
+}
+
+/* TABS */
+
+.tabs{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:40px;
+}
+
+.tab{
+
+    padding:15px 24px;
+
+    background:#101827;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.35s;
+
+    cursor:pointer;
+}
+
+.tab:hover{
+
+    background:#183662;
+
+    transform:translateY(-3px);
+}
+
+/* CARDS */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+.card{
+
+    background:linear-gradient(145deg,#101827,#0c1320);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 40px rgba(80,150,255,0.18);
+}
+
+.card img{
+
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.card-content{
+
+    padding:30px;
+}
+
+.card-content h4{
+
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+.card-content p{
+
+    color:#cbcbcb;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+}
+
+.card-content ul{
+
+    padding-left:22px;
+
+    color:#aeb7c5;
+
+    line-height:2;
+}
+
+/* SOURCES */
+
+.sources{
+
+    background:#0d1522;
+
+    border-radius:30px;
+
+    padding:45px;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.source-item{
+
+    padding:28px 0;
+
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.source-item:last-child{
+    border-bottom:none;
+}
+
+.source-item h5{
+
+    font-size:26px;
+
+    margin-bottom:12px;
+}
+
+.source-item span{
+
+    display:block;
+
+    color:#71b9ff;
+
+    margin-bottom:14px;
+
+    font-size:14px;
+}
+
+.source-item p{
+
+    color:#d4d4d4;
+
+    line-height:1.9;
+}
+
+/* STATS */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:25px;
+}
+
+.stat-box{
+
+    background:#101827;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:0.35s;
+}
+
+.stat-box:hover{
+
+    transform:translateY(-6px);
+
+    background:#14233d;
+}
+
+.stat-box h6{
+
+    font-size:52px;
+
+    color:#71b9ff;
+
+    margin-bottom:12px;
+}
+
+.stat-box p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#03050a;
+
+    padding:80px 30px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-logo{
+
+    width:90px;
+
+    margin-bottom:28px;
+}
+
+footer p{
+
+    color:#98a4b6;
+
+    line-height:2;
+}
+
+/* MOBILE */
+
+@media(max-width:1100px){
+
+    .article-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:850px){
+
+    header{
+        padding:18px 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero h2{
+        font-size:52px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .section-title{
+        font-size:40px;
+    }
+
+    .article-content h3{
+        font-size:40px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg">
+
+            <h1>NASA</h1>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#discovery">Descoberta</a>
+            <a href="#signals">Sinais</a>
+            <a href="#missions">Missões</a>
+            <a href="#analysis">Análises</a>
+            <a href="#sources">Fontes</a>
+            <a href="#stats">Dados</a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            INTERSTELLAR ALERT • VOYAGER TRANSMISSION • NASA
+        </div>
+
+        <h2>
+            Voyager registra
+            possível Buraco Branco
+        </h2>
+
+        <p>
+
+            Após quase cinco décadas cruzando o espaço interestelar,
+            a Voyager registrou sinais gravitacionais anômalos
+            vindos de uma estrutura localizada
+            a aproximadamente
+            <span class="highlight">14 bilhões de anos-luz</span>
+            da Via Láctea.
+
+            Cientistas classificaram o fenômeno como um possível
+            <span class="highlight">Buraco Branco primordial</span>,
+            uma estrutura teórica capaz de expelir matéria,
+            energia e radiação em escala colossal.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#discovery" class="btn-primary">
+                Explorar descoberta
+            </a>
+
+            <a href="#sources" class="btn-secondary">
+                Ver relatórios
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container" id="discovery">
+
+    <div class="article-grid">
+
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop">
+
+        <div class="article-content">
+
+            <h3>
+                Uma descoberta considerada impossível
+            </h3>
+
+            <p>
+
+                Em Maio de 2026,
+                sensores da Voyager registraram
+                emissões gravitacionais extremamente incomuns
+                vindas de uma região próxima
+                à borda do universo observável.
+
+            </p>
+
+            <p>
+
+                O fenômeno recebeu a identificação provisória
+                de <span class="highlight">WH-01</span>,
+                sigla para White Hole Candidate 01.
+
+            </p>
+
+            <p>
+
+                Os dados apontam rajadas energéticas superiores
+                a explosões de supernovas comuns,
+                além de distorções temporais incompatíveis
+                com os modelos atuais da relatividade geral.
+
+            </p>
+
+            <p>
+
+                Pesquisadores do fictício
+                Instituto Internacional de Astrofísica Exótica
+                afirmaram que o objeto aparenta liberar
+                matéria ionizada em velocidades próximas à da luz.
+
+            </p>
+
+            <p>
+
+                Diferente de um buraco negro,
+                que absorve matéria e radiação,
+                o possível Buraco Branco aparenta realizar
+                o comportamento oposto:
+                expelindo energia continuamente.
+
+            </p>
+
+            <p>
+
+                Especialistas acreditam que a estrutura
+                possa estar ligada a buracos de minhoca,
+                singularidades reversas
+                ou regiões remanescentes do Big Bang.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container" id="signals">
+
+    <h3 class="section-title">
+        Leituras registradas pela Voyager
+    </h3>
+
+    <p class="section-subtitle">
+
+        Os sensores da Voyager enviaram informações
+        consideradas incompatíveis com qualquer fenômeno
+        espacial oficialmente conhecido.
+
+    </p>
+
+    <div class="tabs">
+
+        <div class="tab">Energia</div>
+        <div class="tab">Gravidade</div>
+        <div class="tab">Radiação</div>
+        <div class="tab">Tempo</div>
+        <div class="tab">WH-01</div>
+        <div class="tab">Anomalias</div>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1462331321792-cc44368b8894?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h4>
+                    Emissão energética
+                </h4>
+
+                <p>
+
+                    Rajadas energéticas extremamente intensas
+                    foram registradas durante a transmissão.
+
+                </p>
+
+                <ul>
+
+                    <li>Energia superior a supernovas comuns</li>
+                    <li>Pulsos contínuos durante 18 horas</li>
+                    <li>Partículas desconhecidas detectadas</li>
+                    <li>Oscilações fora do espectro conhecido</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1446776709462-d6b525c57bd3?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h4>
+                    Distorções gravitacionais
+                </h4>
+
+                <p>
+
+                    Leituras gravitacionais sofreram alterações
+                    impossíveis de explicar pela física atual.
+
+                </p>
+
+                <ul>
+
+                    <li>Curvatura extrema do espaço-tempo</li>
+                    <li>Oscilações temporais nos sensores</li>
+                    <li>Interferência gravitacional contínua</li>
+                    <li>Falhas de navegação registradas</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h4>
+                    Hipóteses científicas
+                </h4>
+
+                <p>
+
+                    Especialistas criaram diferentes teorias
+                    para tentar explicar o fenômeno.
+
+                </p>
+
+                <ul>
+
+                    <li>Buraco Branco primordial</li>
+                    <li>Portal gravitacional interestelar</li>
+                    <li>Fragmento remanescente do Big Bang</li>
+                    <li>Fenômeno ligado à matéria escura</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container" id="missions">
+
+    <h3 class="section-title">
+        Missões espaciais recentes
+    </h3>
+
+    <p class="section-subtitle">
+
+        Enquanto a Voyager continua enviando dados
+        do espaço interestelar,
+        novas missões seguem expandindo
+        os limites da exploração humana.
+
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h4>
+                    Starship V3
+                </h4>
+
+                <p>
+
+                    A SpaceX prepara a Starship V3,
+                    considerada a maior nave espacial já construída.
+
+                </p>
+
+                <ul>
+
+                    <li>Mais de 150 metros de altura</li>
+                    <li>Projetada para Marte e Lua</li>
+                    <li>Sistema totalmente reutilizável</li>
+                    <li>Mais de 18 milhões de libras de empuxo</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h4>
+                    Falcon Heavy
+                </h4>
+
+                <p>
+
+                    O Falcon Heavy continua sendo
+                    um dos foguetes mais poderosos do mundo.
+
+                </p>
+
+                <ul>
+
+                    <li>Boosters reutilizáveis</li>
+                    <li>Missões orbitais pesadas</li>
+                    <li>Mais de 5 milhões de libras de empuxo</li>
+                    <li>Lançamentos comerciais e militares</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="card-content">
+
+                <h4>
+                    Voyager
+                </h4>
+
+                <p>
+
+                    Lançada em 1977,
+                    a Voyager continua sendo
+                    um dos objetos humanos
+                    mais distantes já criados.
+
+                </p>
+
+                <ul>
+
+                    <li>Viaja pelo espaço interestelar</li>
+                    <li>Carrega o Golden Record</li>
+                    <li>Continua transmitindo dados científicos</li>
+                    <li>Missão ativa há quase 50 anos</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container" id="analysis">
+
+    <h3 class="section-title">
+        Centro de análises
+    </h3>
+
+    <div class="tabs">
+
+        <div class="tab">Relatórios</div>
+        <div class="tab">Gravidade</div>
+        <div class="tab">Matéria escura</div>
+        <div class="tab">Singularidades</div>
+        <div class="tab">WH-01</div>
+        <div class="tab">Impacto científico</div>
+
+    </div>
+
+    <p class="section-subtitle">
+
+        Equipes internacionais seguem analisando
+        os dados enviados pela Voyager.
+        Caso a existência do WH-01 seja confirmada,
+        a descoberta poderá redefinir conceitos fundamentais
+        relacionados à relatividade,
+        singularidades gravitacionais
+        e origem do universo.
+
+    </p>
+
+</section>
+
+<section class="container" id="sources">
+
+    <h3 class="section-title">
+        Relatórios e fontes
+    </h3>
+
+    <p class="section-subtitle">
+
+      Informações adicionais sobre explorações espaciais anteriores:
+
+    </p>
+
+    <div class="sources">
+
+        <div class="source-item">
+
+            <h5>
+                NASA Deep Space Network
+            </h5>
+
+            <span>
+                Atualização de transmissão • Maio 2026
+            </span>
+
+            <p>
+
+                Dados da Voyager indicaram
+                interferência gravitacional anômala
+                durante transmissão interestelar.
+
+            </p>
+
+        </div>
+
+        <div class="source-item">
+
+            <h5>
+                SpaceX Starship Program
+            </h5>
+
+            <span>
+                Programa orbital • 2026
+            </span>
+
+            <p>
+
+                A Starship V3 será a maior nave espacial já construída,
+                projetada para missões lunares,
+                marcianas e reabastecimento orbital.
+
+            </p>
+
+        </div>
+
+        <div class="source-item">
+
+            <h5>
+                White Hole Candidate WH-01
+            </h5>
+
+            <span>
+                Documento experimental fictício
+            </span>
+
+            <p>
+
+                Relatório preliminar sugere
+                uma possível singularidade reversa
+                localizada a aproximadamente
+                14 bilhões de anos-luz da Via Láctea.
+
+            </p>
+
+        </div>
+
+        <div class="source-item">
+
+            <h5>
+                Voyager Signal Analysis Division
+            </h5>
+
+            <span>
+                Arquivo experimental VX-91
+            </span>
+
+            <p>
+
+                Técnicos registraram interferência eletromagnética,
+                oscilações temporais
+                e falhas gravitacionais
+                durante a transmissão dos dados.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container" id="stats">
+
+    <h3 class="section-title">
+        Dados da missão
+    </h3>
+
+    <div class="stats">
+
+        <div class="stat-box">
+
+            <h6>14B LY</h6>
+
+            <p>
+                Distância estimada da anomalia
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h6>1977</h6>
+
+            <p>
+                Lançamento da Voyager
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h6>WH-01</h6>
+
+            <p>
+                Nome da anomalia detectada
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h6>2026</h6>
+
+            <p>
+                Ano da transmissão anômala
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h6>V3</h6>
+
+            <p>
+                Nova geração Starship
+            </p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h6>∞</h6>
+
+            <p>
+                Possíveis implicações científicas
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <img
+    src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg"
+    class="footer-logo">
+
+    <p>
+
+        © 2026 NASA Deep Space Exploration Program
+
+        <br><br>
+
+        NASA - Space exploration and telecommunications
+
+        <br><br>
+
+        Este site utiliza informações baseadas em missões espaciais realizadas pela NASA em parceria com a SPACE-X;
+
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
